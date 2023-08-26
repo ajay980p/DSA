@@ -1,0 +1,22 @@
+void pushZerosAtEnd(vector<int> &arr) 
+{
+	vector<int>v;
+	int count = 0;
+	int p=0;
+
+	for(int i=0; i<arr.size(); i++) {
+		if(arr[i] == 0){
+			count++;
+		}
+		else {
+			arr[p] = arr[i];
+			p++;
+		}
+	}
+
+	while(count != 0) {
+		arr[p] = 0;
+		p++;
+		count--;
+	}
+}

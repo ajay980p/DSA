@@ -1,0 +1,19 @@
+class Solution{
+public:
+    int remove_duplicate(int a[],int n){
+        
+        int p = 0;
+        
+        for(int i=1; i<n; i++) {
+            if (a[i] != a[p]) 
+            {
+                p++;
+                a[p] = a[i];
+            }
+        }
+        
+        // a.size() = a.size() - count;
+        
+        return p+1;
+    }
+};
