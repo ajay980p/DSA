@@ -1,0 +1,17 @@
+vector<string> printNTimes(int n) {
+	
+	// Condition
+	if(n == 0) {
+		return vector<string>();
+	}
+
+	// Calling
+	vector<string> prevResult = printNTimes(n-1);
+
+	// Assignment
+	string res = "Coding Ninjas";
+	prevResult.push_back(res);
+
+	// Return
+	return prevResult;
+}
