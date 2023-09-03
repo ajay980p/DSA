@@ -1,0 +1,22 @@
+int findMaxFruits(vector<int> &arr, int n) {
+    
+    int tail = 0;
+    int ans = 0;
+    map<int, int>mp;
+
+    for(int head=0; head<arr.size(); head++) {
+        mp[arr[head]]++;
+
+        while(mp.size() > 2) {
+            mp[arr[tail]]--;
+            if(mp[arr[tail]] == 0) {
+                mp.erase(arr[tail]);
+            }
+            tail++;
+        }
+
+        ans = max(ans, head-tail+1);
+    }
+
+    return ans;
+}

@@ -1,0 +1,17 @@
+vector<int> printNos(int x) {
+    
+    // Condition
+    if(x == 0) {
+        return vector<int>();
+    }
+
+    // Calling
+    vector<int> result = printNos(x-1);
+
+    // Assignment
+    int res = x;
+    result.push_back(res);
+
+    // return
+    return result;
+}

@@ -1,0 +1,17 @@
+Node *deleteLast(Node *list){
+    
+    Node *temp = list;
+    Node *temp2;
+
+    while(temp->next != NULL) {
+        temp2 = temp;
+        temp = temp->next;
+    }
+
+    temp2->next = NULL;
+
+    delete temp;
+
+    return list;
+    
+}

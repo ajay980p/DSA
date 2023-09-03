@@ -1,0 +1,14 @@
+Node* reverseLinkedList(Node *head)
+{
+    Node *temp = NULL;
+    Node *curr = head;
+
+    while(curr != NULL) {
+        Node *second = curr->next;
+        curr->next = temp;
+        temp = curr;
+        curr = second;
+    }
+
+    return temp;
+}
